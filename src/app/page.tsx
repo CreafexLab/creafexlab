@@ -94,9 +94,12 @@ export default function Home() {
           </a>
         </header>
 
-        <section className="hero" aria-labelledby="hero-title">
+        <section
+          className="relative grid grid-cols-1 items-start gap-6 pt-8 pb-11 min-[620px]:gap-7 min-[620px]:pt-10 min-[620px]:pb-12 min-[900px]:grid-cols-[minmax(0,1.6fr)_minmax(280px,0.6fr)] min-[900px]:items-end min-[900px]:gap-10 min-[900px]:pt-11 min-[900px]:pb-14"
+          aria-labelledby="hero-title"
+        >
           <Image
-            className="hero-art"
+            className="pointer-events-none absolute top-0 right-[-120px] z-0 h-auto w-[280px] rotate-[7deg] opacity-[0.08] saturate-[0.9] min-[620px]:top-[-20px] min-[620px]:right-[-90px] min-[620px]:w-[340px] min-[620px]:opacity-[0.12] min-[900px]:top-[-56px] min-[900px]:right-[2%] min-[900px]:w-[clamp(250px,27vw,360px)]"
             src="/logo-hero.png"
             alt=""
             aria-hidden="true"
@@ -104,26 +107,45 @@ export default function Home() {
             height={1187}
             priority
           />
-          <div className="hero-copy">
-            <p className="eyebrow">
-              <span className="status-dot" />
+          <div className="relative z-[1]">
+            <p className="m-0 mb-[13px] flex items-center gap-2.5 font-mono text-[11px] leading-[1.2] font-semibold tracking-[0.13em] text-[#57627c] uppercase">
+              <span className="size-[7px] rounded-full bg-[var(--blue)] shadow-[0_0_0_5px_rgba(36,107,253,0.1)]" />
               Independent product studio
             </p>
-            <h1 id="hero-title">
-              Creafex <span>Lab</span>
+            <h1
+              id="hero-title"
+              className="m-0 max-w-[800px] font-[family-name:var(--display)] text-[clamp(36px,10vw,50px)] leading-[0.95] font-[650] tracking-[-0.072em] min-[620px]:text-[clamp(40px,5vw,70px)]"
+            >
+              Creafex{" "}
+              <span className="bg-[linear-gradient(105deg,var(--blue)_5%,var(--violet)_78%)] bg-clip-text text-transparent">
+                Lab
+              </span>
             </h1>
-            <a className="text-link" href="#projects">
+            <a
+              className="mt-[18px] inline-flex items-center gap-[11px] border-b border-[#aeb8cf] pb-[5px] text-sm font-[680] transition-[gap,border-color] duration-[180ms] ease-in-out hover:gap-4 hover:border-[var(--blue)]"
+              href="#projects"
+            >
               See what we&apos;re building
               <Arrow />
             </a>
           </div>
 
-          <div className="signal" aria-hidden="true">
-            <span className="signal__start" />
-            <svg viewBox="0 0 1200 146" preserveAspectRatio="none">
-              <path d="M8 70C190 70 178 22 350 52S535 126 690 84s222-78 502-18" />
+          <div
+            className="pointer-events-none absolute inset-x-[-4vw] bottom-3 h-20"
+            aria-hidden="true"
+          >
+            <span className="absolute top-[35px] left-0 z-[1] size-[7px] rounded-full border-2 border-[var(--paper)] bg-[var(--blue)] shadow-[0_0_0_1px_rgba(36,107,253,0.3)]" />
+            <svg
+              className="h-full w-full overflow-visible"
+              viewBox="0 0 1200 146"
+              preserveAspectRatio="none"
+            >
+              <path
+                className="fill-none stroke-[var(--violet)] stroke-2 opacity-[0.28] [stroke-dasharray:2_8] [stroke-linecap:round]"
+                d="M8 70C190 70 178 22 350 52S535 126 690 84s222-78 502-18"
+              />
             </svg>
-            <span className="signal__end" />
+            <span className="absolute top-[33px] right-0 z-[1] size-[7px] rounded-full border-2 border-[var(--paper)] bg-[var(--violet)] shadow-[0_0_0_1px_rgba(36,107,253,0.3)]" />
           </div>
         </section>
 
