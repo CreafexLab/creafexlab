@@ -10,7 +10,7 @@ config.autoAddCss = false;
 export const metadata: Metadata = {
   title: "Creafex Lab — Useful software, built with care",
   description:
-    "Creafex Lab is Vladimir Haltakov's independent product company, building Simple Photo Gallery, Simple Post, Simple Muscle, and more.",
+    "Creafex Lab is Vladimir Haltakov's independent product company, building Simple Photo Gallery, SimplePost, Simple Muscle, and Leoline.",
   authors: [{ name: "Vladimir Haltakov", url: "https://haltakov.com" }],
   metadataBase: new URL("https://creafexlab.com"),
   alternates: { canonical: "/" },
@@ -18,9 +18,18 @@ export const metadata: Metadata = {
     title: "Creafex Lab",
     description:
       "An independent product company by Vladimir Haltakov, building focused software where design and AI meet.",
+    url: "https://creafexlab.com/",
     type: "website",
     siteName: "Creafex Lab",
-    images: ["/social.jpg"],
+    locale: "en_US",
+    images: [
+      {
+        url: "/social.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Creafex Lab",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -33,6 +42,13 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
   manifest: "/manifest.webmanifest",
 };

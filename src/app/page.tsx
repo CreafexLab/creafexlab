@@ -25,7 +25,7 @@ const projects = [
     href: "https://simple.photo",
     accent: "blue",
     icon: "/products/simple-photo-gallery-icon.png",
-    screenshot: "/products/simple-photo-gallery.jpg",
+    screenshot: "/products/simple-photo-gallery.avif",
     imageAlt: "The Simple Photo Gallery landing page",
   },
   {
@@ -36,7 +36,7 @@ const projects = [
     href: "https://simplepost.social",
     accent: "violet",
     icon: "/products/simple-post-icon.png",
-    screenshot: "/products/simple-post.jpg",
+    screenshot: "/products/simple-post.avif",
     imageAlt: "The Simple Post landing page",
   },
   {
@@ -47,7 +47,7 @@ const projects = [
     href: "https://simplemuscle.ai",
     accent: "indigo",
     icon: "/products/simple-muscle-icon.png",
-    screenshot: "/products/simple-muscle.jpg",
+    screenshot: "/products/simple-muscle.avif",
     imageAlt: "The Simple Muscle landing page",
   },
   {
@@ -57,8 +57,8 @@ const projects = [
       "A voice-first storyteller that creates unique, age-appropriate adventures for children.",
     href: "https://leoline.fun",
     accent: "orange",
-    icon: "https://leoline.fun/icons/icon-192.png",
-    screenshot: "https://leoline.fun/img/leoline-social.jpg",
+    icon: "/products/leoline-icon.png",
+    screenshot: "/products/leoline-social.avif",
     imageAlt: "Leoline, the orange rabbit storyteller for children",
   },
 ] as const;
@@ -67,13 +67,23 @@ function JsonLd() {
   const data = {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": "https://creafexlab.com/#organization",
     name: "Creafex Lab",
     url: "https://creafexlab.com",
     logo: "https://creafexlab.com/logo-mark.png",
+    description:
+      "Creafex Lab is Vladimir Haltakov's independent software product company.",
     founder: {
       "@type": "Person",
+      "@id": "https://haltakov.com/#person",
       name: "Vladimir Haltakov",
       url: "https://haltakov.com",
+      jobTitle: "Software engineer and founder",
+      sameAs: [
+        "https://github.com/haltakov",
+        "https://www.linkedin.com/in/haltakov/",
+        "https://x.com/haltakov",
+      ],
     },
     makesOffer: projects.map((project) => ({
       "@type": "Offer",
@@ -144,12 +154,11 @@ export default function Home() {
         >
           <Image
             className="pointer-events-none absolute top-0 right-[-120px] z-0 h-auto w-[280px] rotate-[7deg] opacity-[0.08] saturate-[0.9] min-[620px]:top-[-20px] min-[620px]:right-[-90px] min-[620px]:w-[340px] min-[620px]:opacity-[0.12] min-[900px]:top-[-56px] min-[900px]:right-[2%] min-[900px]:w-[clamp(250px,27vw,360px)]"
-            src="/logo-hero.png"
+            src="/logo-hero.avif"
             alt=""
             aria-hidden="true"
             width={1000}
             height={1187}
-            priority
           />
           <div className="relative z-[1]">
             <p className="m-0 mb-[13px] flex items-center gap-2.5 font-mono text-[11px] leading-[1.2] font-semibold tracking-[0.13em] text-[#57627c] uppercase">
@@ -202,7 +211,7 @@ export default function Home() {
           </div>
 
           <div className="project-grid">
-            {projects.map((project) => (
+            {projects.map((project, index) => (
               <a
                 className={`project-card project-card--${project.accent}`}
                 href={project.href}
@@ -217,7 +226,9 @@ export default function Home() {
                     alt={project.imageAlt}
                     width={1440}
                     height={900}
-                    unoptimized={project.screenshot.startsWith("https://")}
+                    sizes="(max-width: 760px) calc(100vw - 54px), (max-width: 1100px) 46vw, 520px"
+                    priority={index === 0}
+                    fetchPriority={index === 0 ? "high" : "auto"}
                   />
                   <span className="project-arrow">
                     <Arrow diagonal />
@@ -231,7 +242,6 @@ export default function Home() {
                       aria-hidden="true"
                       width={24}
                       height={24}
-                      unoptimized={project.icon.startsWith("https://")}
                     />
                     <span>{project.label}</span>
                   </div>
