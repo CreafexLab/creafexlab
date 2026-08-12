@@ -162,7 +162,7 @@ main {
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 16px;
 }
 
@@ -206,6 +206,10 @@ main {
 
 .project-card--indigo {
   --card-accent: var(--indigo);
+}
+
+.project-card--orange {
+  --card-accent: #e38b2c;
 }
 
 .project-card:hover {
@@ -430,6 +434,28 @@ footer {
 
 footer > span {
   justify-self: end;
+}
+
+.simple-not-found {
+  padding-top: 96px;
+}
+
+.simple-not-found h1 {
+  margin: 0;
+  font-family: var(--display);
+  font-size: clamp(36px, 6vw, 54px);
+  letter-spacing: -0.05em;
+}
+
+.simple-not-found p {
+  margin: 14px 0 24px;
+  color: var(--muted);
+}
+
+.simple-not-found a {
+  border-bottom: 1px solid var(--blue);
+  padding-bottom: 3px;
+  font-weight: 650;
 }
 
 @media (max-width: 900px) {

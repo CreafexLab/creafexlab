@@ -1,0 +1,14 @@
+# Creafex Lab
+
+Creafex Lab is Vladimir Haltakov's independent product company.
+
+## Products
+
+- [Simple Photo Gallery](https://simple.photo/)
+- [SimplePost](https://simplepost.social/)
+- [Simple Muscle](https://simplemuscle.ai/)
+- [Leoline](https://leoline.fun/)
+
+## Founder
+
+- [Vladimir Haltakov](https://haltakov.com/)

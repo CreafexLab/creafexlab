@@ -50,7 +50,51 @@ const projects = [
     screenshot: "/products/simple-muscle.jpg",
     imageAlt: "The Simple Muscle landing page",
   },
+  {
+    name: "Leoline",
+    label: "Stories for kids",
+    description:
+      "A voice-first storyteller that creates unique, age-appropriate adventures for children.",
+    href: "https://leoline.fun",
+    accent: "orange",
+    icon: "https://leoline.fun/icons/icon-192.png",
+    screenshot: "https://leoline.fun/img/leoline-social.jpg",
+    imageAlt: "Leoline, the orange rabbit storyteller for children",
+  },
 ] as const;
+
+function JsonLd() {
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Creafex Lab",
+    url: "https://creafexlab.com",
+    logo: "https://creafexlab.com/logo-mark.png",
+    founder: {
+      "@type": "Person",
+      name: "Vladimir Haltakov",
+      url: "https://haltakov.com",
+    },
+    makesOffer: projects.map((project) => ({
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "SoftwareApplication",
+        name: project.name,
+        url: project.href,
+        description: project.description,
+      },
+    })),
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(data).replace(/</g, "\\u003c"),
+      }}
+    />
+  );
+}
 
 function Arrow({ diagonal = false }: { diagonal?: boolean }) {
   return (
@@ -173,6 +217,7 @@ export default function Home() {
                     alt={project.imageAlt}
                     width={1440}
                     height={900}
+                    unoptimized={project.screenshot.startsWith("https://")}
                   />
                   <span className="project-arrow">
                     <Arrow diagonal />
@@ -186,6 +231,7 @@ export default function Home() {
                       aria-hidden="true"
                       width={24}
                       height={24}
+                      unoptimized={project.icon.startsWith("https://")}
                     />
                     <span>{project.label}</span>
                   </div>
@@ -255,6 +301,7 @@ export default function Home() {
           <span>© {new Date().getFullYear()}</span>
         </footer>
       </div>
+      <JsonLd />
     </main>
   );
 }
