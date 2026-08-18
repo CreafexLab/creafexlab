@@ -7,6 +7,7 @@ Creafex Lab is Vladimir Haltakov's independent product company.
 - [Simple Photo Gallery](https://simple.photo/) — Turn a collection of photos into a story-driven gallery that is easy to share.
 - [SimplePost](https://simplepost.social/) — Draft, schedule, and publish social posts from AI assistants.
 - [Simple Muscle](https://simplemuscle.ai/) — A focused iPhone workout tracker that connects training data to AI assistants.
+- [Simple Unmark](https://simpleunmark.com/) — Remove hidden artifacts and reduce statistical watermark patterns in AI text.
 - [Leoline](https://leoline.fun/) — A voice-first storyteller that creates age-appropriate adventures for children.
 
 ## Founder

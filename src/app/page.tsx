@@ -51,6 +51,17 @@ const projects = [
     imageAlt: "The Simple Muscle landing page",
   },
   {
+    name: "Simple Unmark",
+    label: "AI text cleanup",
+    description:
+      "Remove hidden artifacts and reduce statistical watermark patterns in AI text.",
+    href: "https://simpleunmark.com",
+    accent: "teal",
+    icon: "/products/simple-unmark-icon.png",
+    screenshot: "/products/simple-unmark.avif",
+    imageAlt: "Simple Unmark, a tool for removing watermarks from AI text",
+  },
+  {
     name: "Leoline",
     label: "Stories for kids",
     description:

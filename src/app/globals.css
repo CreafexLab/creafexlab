@@ -208,6 +208,10 @@ main {
   --card-accent: var(--indigo);
 }
 
+.project-card--teal {
+  --card-accent: #08949f;
+}
+
 .project-card--orange {
   --card-accent: #e38b2c;
 }

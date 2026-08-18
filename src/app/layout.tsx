@@ -10,7 +10,7 @@ config.autoAddCss = false;
 export const metadata: Metadata = {
   title: "Creafex Lab — Useful software, built with care",
   description:
-    "Creafex Lab is Vladimir Haltakov's independent product company, building Simple Photo Gallery, SimplePost, Simple Muscle, and Leoline.",
+    "Creafex Lab is Vladimir Haltakov's independent product company, building Simple Photo Gallery, SimplePost, Simple Muscle, Simple Unmark, and Leoline.",
   authors: [{ name: "Vladimir Haltakov", url: "https://haltakov.com" }],
   metadataBase: new URL("https://creafexlab.com"),
   alternates: { canonical: "/" },
