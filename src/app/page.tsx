@@ -96,15 +96,6 @@ function JsonLd() {
         "https://x.com/haltakov",
       ],
     },
-    makesOffer: projects.map((project) => ({
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "SoftwareApplication",
-        name: project.name,
-        url: project.href,
-        description: project.description,
-      },
-    })),
   };
 
   return (
