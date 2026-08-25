@@ -58,7 +58,7 @@ const projects = [
     href: "https://simpleunmark.com",
     accent: "teal",
     icon: "/products/simple-unmark-icon.png",
-    screenshot: "/products/simple-unmark.avif",
+    screenshot: "/products/simple-unmark.jpg",
     imageAlt: "Simple Unmark, a tool for removing watermarks from AI text",
   },
   {
