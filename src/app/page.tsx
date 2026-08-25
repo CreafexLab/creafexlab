@@ -156,7 +156,7 @@ export default function Home() {
         >
           <Image
             className="pointer-events-none absolute top-0 right-[-120px] z-0 h-auto w-[280px] rotate-[7deg] opacity-[0.08] saturate-[0.9] min-[620px]:top-[-20px] min-[620px]:right-[-90px] min-[620px]:w-[340px] min-[620px]:opacity-[0.12] min-[900px]:top-[-56px] min-[900px]:right-[2%] min-[900px]:w-[clamp(250px,27vw,360px)]"
-            src="/logo-hero.avif"
+            src="/logo-hero.png"
             alt=""
             aria-hidden="true"
             width={1000}
