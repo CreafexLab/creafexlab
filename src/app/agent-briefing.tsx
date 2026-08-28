@@ -417,12 +417,10 @@ function ReportList({ title, items }: { title: string; items: string[] }) {
 
 export default function AgentBriefing() {
   const [summary, setSummary] = useState<InterestSummary | null>(null);
-  const [webMcpReady, setWebMcpReady] = useState<boolean | null>(null);
 
   useEffect(() => {
     const modelContext =
       document.modelContext ?? (navigator as LegacyNavigator).modelContext;
-    setWebMcpReady(Boolean(modelContext));
     if (!modelContext) return;
 
     const controller = new AbortController();
@@ -487,75 +485,35 @@ export default function AgentBriefing() {
   }, []);
 
   return (
-    <section className="agent-briefing" id="agent-briefing" aria-labelledby="agent-title">
-      <div className="agent-heading">
-        <div>
-          <p className="eyebrow">For your AI agent</p>
-          <h2 id="agent-title">
-            Let your agent find the <span>overlap.</span>
-          </h2>
-        </div>
-        <div className="agent-heading__intro">
-          <p>
-            Your agent already knows what you care about. Here it can research
-            the lab, connect the relevant dots, and leave the useful part on the
-            page for you.
-          </p>
-          <div className="webmcp-note">
-            <span className="webmcp-note__status">
+    <section
+      className="agent-briefing"
+      id="agent-briefing"
+      aria-label="WebMCP agent hint and personalized report"
+    >
+      <aside className="agent-hint">
+        <span className="agent-hint__mark" aria-hidden="true">
+          <i />
+          <i />
+        </span>
+        <div className="agent-hint__copy">
+          <div>
+            <strong>Ask your AI agent</strong>
+            <span className="agent-hint__status">
               <i aria-hidden="true" />
               WebMCP
             </span>
-            <span className="webmcp-note__prompt">
-              Try: “Explore Creafex Lab for me and show what&apos;s relevant.”
-            </span>
           </div>
+          <p>Try: “Explore Creafex Lab for me and show what&apos;s relevant.”</p>
         </div>
-      </div>
+        <a href={KNOWLEDGE_BASE_URL}>Source ↗</a>
+      </aside>
 
-      <div className="agent-route" aria-label="The two-step agent workflow">
-        <div className="route-step">
-          <span className="route-step__number">01</span>
-          <div>
-            <code>ask_creafex</code>
-            <p>Explore the source knowledge base</p>
-          </div>
-        </div>
-        <div className="route-line" aria-hidden="true">
-          <span />
-        </div>
-        <div className="route-step">
-          <span className="route-step__number">02</span>
-          <div>
-            <code>show_interest_summary</code>
-            <p>Turn the findings into your report</p>
-          </div>
-        </div>
-      </div>
-
-      <article
-        className={`personalized-report${summary ? " personalized-report--ready" : ""}`}
-        id="personalized-report"
-        aria-live="polite"
-      >
-        {!summary ? (
-          <div className="report-empty">
-            <div className="report-empty__signal" aria-hidden="true">
-              <span />
-              <span />
-              <span />
-            </div>
-            <p className="report-kicker">
-              {webMcpReady === false ? "WebMCP preview needed" : "Agent channel open"}
-            </p>
-            <h3>Your personal briefing will appear here.</h3>
-            <p>
-              Ask a WebMCP-capable agent to visit this page, explore Creafex Lab
-              using what it knows about you, and show its conclusions.
-            </p>
-            <a href={KNOWLEDGE_BASE_URL}>Read the source document</a>
-          </div>
-        ) : (
+      {summary ? (
+        <article
+          className="personalized-report personalized-report--ready"
+          id="personalized-report"
+          aria-live="polite"
+        >
           <div className="report-content">
             <header className="report-content__header">
               <div>
@@ -602,8 +560,8 @@ export default function AgentBriefing() {
               </a>
             </div>
           </div>
-        )}
-      </article>
+        </article>
+      ) : null}
     </section>
   );
 }
