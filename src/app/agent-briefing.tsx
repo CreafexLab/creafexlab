@@ -495,11 +495,23 @@ export default function AgentBriefing() {
             Let your agent find the <span>overlap.</span>
           </h2>
         </div>
-        <p>
-          Your agent already knows what you care about. Here it can research the
-          lab, connect the relevant dots, and leave the useful part on the page
-          for you.
-        </p>
+        <div className="agent-heading__intro">
+          <p>
+            Your agent already knows what you care about. Here it can research
+            the lab, connect the relevant dots, and leave the useful part on the
+            page for you.
+          </p>
+          <div className="webmcp-callout">
+            <span className="webmcp-callout__status">
+              <i aria-hidden="true" />
+              WebMCP supported
+            </span>
+            <p>
+              <span>Try this prompt</span>
+              “Explore Creafex Lab for me and show what&apos;s relevant.”
+            </p>
+          </div>
+        </div>
       </div>
 
       <div className="agent-route" aria-label="The two-step agent workflow">
@@ -542,10 +554,6 @@ export default function AgentBriefing() {
               Ask a WebMCP-capable agent to visit this page, explore Creafex Lab
               using what it knows about you, and show its conclusions.
             </p>
-            <blockquote>
-              Visit creafexlab.com. Use <code>ask_creafex</code> to find what is
-              relevant to me, then call <code>show_interest_summary</code>.
-            </blockquote>
             <a href={KNOWLEDGE_BASE_URL}>Read the source document</a>
           </div>
         ) : (
