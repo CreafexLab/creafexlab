@@ -501,15 +501,14 @@ export default function AgentBriefing() {
             the lab, connect the relevant dots, and leave the useful part on the
             page for you.
           </p>
-          <div className="webmcp-callout">
-            <span className="webmcp-callout__status">
+          <div className="webmcp-note">
+            <span className="webmcp-note__status">
               <i aria-hidden="true" />
-              WebMCP supported
+              WebMCP
             </span>
-            <p>
-              <span>Try this prompt</span>
-              “Explore Creafex Lab for me and show what&apos;s relevant.”
-            </p>
+            <span className="webmcp-note__prompt">
+              Try: “Explore Creafex Lab for me and show what&apos;s relevant.”
+            </span>
           </div>
         </div>
       </div>
