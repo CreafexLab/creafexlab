@@ -5,6 +5,7 @@ import {
   faLinkedinIn,
   faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+import AgentBriefing from "./agent-briefing";
 
 const socials = [
   { label: "Vladimir Haltakov on X", href: "https://x.com/haltakov", icon: faXTwitter },
@@ -161,6 +162,7 @@ export default function Home() {
             aria-hidden="true"
             width={1000}
             height={1187}
+            priority
           />
           <div className="relative z-[1]">
             <p className="m-0 mb-[13px] flex items-center gap-2.5 font-mono text-[11px] leading-[1.2] font-semibold tracking-[0.13em] text-[#57627c] uppercase">
@@ -257,6 +259,8 @@ export default function Home() {
             ))}
           </div>
         </section>
+
+        <AgentBriefing />
 
         <section
           className="contact-strip"

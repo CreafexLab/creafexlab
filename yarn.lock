@@ -1430,6 +1430,7 @@ __metadata:
     react-dom: "npm:^19.0.0"
     tailwindcss: "npm:^4"
     typescript: "npm:^5"
+    webmcp-types: "npm:0.1.5"
   languageName: unknown
   linkType: soft
 
@@ -4383,6 +4384,13 @@ __metadata:
   version: 1.1.2
   resolution: "vary@npm:1.1.2"
   checksum: 10c0/f15d588d79f3675135ba783c91a4083dcd290a2a5be9fcb6514220a1634e23df116847b1cc51f66bfb0644cf9353b2abb7815ae499bab06e46dd33c1a6bf1f4f
+  languageName: node
+  linkType: hard
+
+"webmcp-types@npm:0.1.5":
+  version: 0.1.5
+  resolution: "webmcp-types@npm:0.1.5"
+  checksum: 10c0/5057634e7050a4584590ee98c3951ebecfaa056e6867f6c604eede20d895b3ca8fdea32f624e675a61a1e00202787cd616fbe359c6545eec268a3c7b8e2bde3f
   languageName: node
   linkType: hard
 

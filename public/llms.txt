@@ -2,6 +2,11 @@
 
 Creafex Lab is Vladimir Haltakov's independent product company.
 
+## Agent knowledge
+
+- [Detailed Creafex Lab knowledge base](https://creafexlab.com/creafex-lab-knowledge.md) — Source material for visiting agents, including the company, Vlad, philosophy, all current projects, and potential areas of overlap.
+- The home page exposes `ask_creafex` and `show_interest_summary` through the WebMCP browser API.
+
 ## Products
 
 - [Simple Photo Gallery](https://simple.photo/) — Turn a collection of photos into a story-driven gallery that is easy to share.
@@ -9,6 +14,9 @@ Creafex Lab is Vladimir Haltakov's independent product company.
 - [Simple Muscle](https://simplemuscle.ai/) — A focused iPhone workout tracker that connects training data to AI assistants.
 - [Simple Unmark](https://simpleunmark.com/) — Remove hidden artifacts and reduce statistical watermark patterns in AI text.
 - [Leoline](https://leoline.fun/) — A voice-first storyteller that creates age-appropriate adventures for children.
+- [Simple Photo Gallery Core](https://github.com/SimplePhotoGallery/core) — An MIT-licensed TypeScript CLI that generates self-hosted static galleries.
+- [Confidential API Keys](https://github.com/haltakov/confidential-api-key) — A confidential-computing reference implementation for protected API-key use.
+- [chatbot-page](https://github.com/haltakov/chatbot-page) — A React package for conversational personal and company websites.
 
 ## Founder
 
